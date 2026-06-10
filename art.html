@@ -4,23 +4,33 @@
     <meta charset="utf-8" />
     <title>Final Project - Art</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
-    <style>
-      /* Styling Only Related To THIS Page */
-      .parent-flex {
-        display: flex;
-        background-color: purple;
-        justify-content: space-around;
-        padding: 10px;
-        margin-bottom: 20px;
-      }
+    
+<style>
 
-      img {
-        max-width: 30%;
-        border-radius: 10px;
-        object-fit: contain;
-        background-color: white;
-      }
-    </style>
+.parent-flex {
+    column-count: 3;
+    column-gap: 30px;
+    max-width: 1800px;
+    margin: auto;
+    padding: 20px;
+}
+
+.parent-flex img {
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    display: block;
+    break-inside: avoid;
+    transition: transform 0.3s ease;
+}
+
+.parent-flex img:hover {
+    transform: scale(1.05);
+
+}
+</style>
+
+
   </head>
   <body>
     <!-- ⬆⬆⬆⬆ Nav Bar -->
@@ -31,8 +41,8 @@
       <li><a href="resume.html">Resume</a></li>
       <li style="float: right">
         <a target="_blank" href=""
-          ><img
-            src="https://www.getfocused.no/wp-content/uploads/2022/09/White-YouTube-Logo-Transparent.png"
+          ></a><img
+            src="images/teal/teal.jpg" 
             style="width: 25px; margin: -5px"
         /></a>
       </li>
@@ -47,22 +57,30 @@
     <!-- ⬇⬇⬇⬇⬇⬇ Main Page Content -->
     <h1>My Art</h1>
 
-    <div class="parent-flex">
-      <img
-        src="images/HeartIcons.jpeg"
-      />
-      <img
-        src="images/VibeyTunes.png"
-      />
-    </div>
 
-    <div class="parent-flex">
-      <img
-        src="images/VibeyTunes.png"
-      />
-      <img
-        src="images/HeartIcons.jpeg"
-      />
-    </div>
+<div class="parent-flex">
+
+    <a href="top-project.html">
+        <img src="images/teal/front teal.jpg" />
+    </a>
+
+    <a href="skirt-project.html">
+        <img src="skirt/skirt back.jpg" />
+    </a>
+
+    <img src="fashion figure/fashion figure.jpg" />
+
+    <img src="fashion figure/fashion design/fashion design.jpg" />
+
+   <img src="mood board/mood board.jpg" />
+
+<a href="paper-dress-project.html">
+    <img src="paper dress/dress pretty.jpg" />
+</a>
+
+
+
+</div>
+
   </body>
 </html>
