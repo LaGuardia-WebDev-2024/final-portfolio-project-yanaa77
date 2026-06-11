@@ -1,90 +1,246 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <meta charset="utf-8" />
-    <title>Final Project - About Me</title>
+    <title>About Me</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
-    <style>
-      /* Styling Only Related To THIS Page */
-      .parent-flex {
-        display: flex;
-        background-color: purple;
-        align-items: center;
-        justify-content: space-around;
-        margin-bottom: 50px;
-      }
 
-      .parent-flex img {
-        width: 150px;
-        padding: 20px;
-      }
-      .child-flex p {
-        background-color: pink;
-        padding: 20px;
-        margin: 20px;
-      }
-    </style>
-  </head>
-  <body>
-    <!-- ⬆⬆⬆⬆ Nav Bar -->
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a class="active" href="aboutme.html">About Me</a></li>
-      <li><a href="art.html">Art</a></li>
-      <li><a href="resume.html">Resume</a></li>
-      <li style="float: right">
-        <a target="_blank" href=""
-          ><img
-            src="https://www.getfocused.no/wp-content/uploads/2022/09/White-YouTube-Logo-Transparent.png"
-            style="width: 25px; margin: -5px"
-        /></a>
-      </li>
-      <li style="float: right">
-        <a target="_blank" href=""
-          ><img
-            src="https://img.icons8.com/win10/512/FFFFFF/instagram-new.png"
-            style="width: 25px; margin: -5px"
-        /></a>
-      </li>
-    </ul>
 
-    <!-- ⬇⬇⬇⬇⬇⬇ Main Page Content -->
-    <h1>About Me</h1>
-    <div class="parent-flex">
-      <div class="child-flex">
-        <img
-          src="images/HeartIcons.jpeg"
-        />
-      </div>
-      <div class="child-flex">
+<style>
+
+
+body{
+    margin:0;
+    background-image: url("stripes/stripes.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    font-family: Georgia, serif;
+    text-align:center;
+}
+
+
+
+/* NAV BAR */
+ul{
+    list-style-type:none;
+    margin:0;
+    padding:0;
+    overflow:hidden;
+    background-color:black;
+}
+
+
+li{
+    float:left;
+}
+
+
+li a{
+    display:block;
+    color:white;
+    text-align:center;
+    padding:16px 20px;
+    text-decoration:none;
+}
+
+
+li a:hover{
+    background-color:#444;
+}
+
+
+.active{
+    background-color:#8b6ccf;
+}
+
+
+/* TITLE */
+h1{
+    color:white;
+    font-size:55px;
+    margin-top:40px;
+}
+
+
+/* ABOUT ME TOP SECTION */
+.about-section{
+    background:white;
+    width:80%;
+    margin:40px auto;
+    padding:30px;
+    display:flex;
+    align-items:center;
+    gap:30px;
+    box-shadow:0px 4px 20px rgba(0,0,0,0.2);
+}
+
+
+.me-photo{
+    width:280px;
+    height:350px;
+    object-fit:cover;
+}
+
+
+.about-text{
+    text-align:left;
+    color:#444;
+}
+
+
+.about-text h2{
+    font-size:35px;
+    margin-top:0;
+}
+
+
+.about-text p{
+    font-size:20px;
+    line-height:1.6;
+}
+
+
+/* SECTION TITLE */
+.section-title{
+    color:rgb(111, 111, 111);
+    font-size:42px;
+    margin-top:50px;
+}
+
+
+/* FASHION DESIGNER CARDS */
+.fun-facts{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:40px;
+    padding:40px;
+}
+
+
+.card{
+    background:white;
+    width:380px;
+    padding:15px;
+    box-shadow:0px 6px 25px rgba(0,0,0,0.3);
+}
+
+
+.card img{
+    width:100%;
+    height:450px;
+    object-fit:cover;
+    transition: transform 0.4s ease;
+}
+
+
+.card img:hover{
+    transform: scale(1.08);
+}
+
+
+
+.card p{
+    font-size:28px;
+}
+
+
+.tilt-left{
+    transform:rotate(-5deg);
+}
+
+
+.tilt-right{
+    transform:rotate(5deg);
+}
+
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- NAVIGATION -->
+<ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a class="active" href="aboutme.html">About Me</a></li>
+    <li><a href="art.html">Art</a></li>
+    <li><a href="websites.html">My Websites</a></li>
+
+
+    <li style="float:right">
+        <a target="_blank" href="https://instagram.com/yanaxx73">
+            <img src="https://img.icons8.com/win10/512/FFFFFF/instagram-new.png"
+            style="width:25px; margin:-5px;">
+        </a>
+    </li>
+</ul>
+
+
+<!-- TOP ABOUT SECTION -->
+<div class="about-section">
+
+
+    <!-- YOUR PHOTO -->
+    <img src="me/bird.jpg" class="me-photo">
+
+
+    <!-- ABOUT YOU TEXT -->
+    <div class="about-text">
+        <h2>Hi! I'm Yana </h2>
+
+
         <p>
-          Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque
-          faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi
-          pretium tellus duis convallis. Tempus leo eu aenean sed diam urna
-          tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas.
-          Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut
-          hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent
-          per conubia nostra inceptos himenaeos.
+            My name is Yana Artymenko and I’m passionate about
+            fashion, styling, and creativity. I love exploring
+            different fashion aesthetics and looking for my personal style.
         </p>
-      </div>
-    </div>
-    <div class="parent-flex">
-      <div class="child-flex">
+
+
         <p>
-          Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque
-          faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi
-          pretium tellus duis convallis. Tempus leo eu aenean sed diam urna
-          tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas.
-          Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut
-          hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent
-          per conubia nostra inceptos himenaeos.
+            This portfolio shows my inspirations, interests,
+            and creative work.
         </p>
-      </div>
-      <div class="child-flex">
-        <img
-          src="images/VibeyTunes.png"
-        />
-      </div>
     </div>
-  </body>
+
+
+</div>
+
+
+<!-- TITLE -->
+<h2 class="section-title">
+    My Favorite Fashion Designers
+</h2>
+
+
+<!-- DESIGNER CARDS -->
+<div class="fun-facts">
+
+
+    <div class="card tilt-left">
+        <img src="alexander/mcqueen.jpg">
+        <p>Alexander McQueen</p>
+    </div>
+
+
+    <div class="card">
+        <img src="westwood/westwood.jpg">
+        <p>Vivienne Westwood</p>
+    </div>
+
+
+    <div class="card tilt-right">
+        <img src="owens/rick.jpg">
+        <p>Richard Saturnino Owens</p>
+    </div>
+
+
+</div>
+
+
+</body>
 </html>
